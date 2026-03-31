@@ -65,11 +65,11 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             <LoginForm next={params.next} />
 
             <div className="mt-6 rounded-2xl bg-slate-50 px-4 py-4 text-sm text-slate-500">
-              本地开发种子账号：
+              本地开发账号请在 `.env.local` 中自行配置：
               <div className="mt-2 space-y-1 font-mono text-xs text-slate-700">
-                <div>admin / openmaic123</div>
-                <div>creator / creator123</div>
-                <div>learner / learn123</div>
+                <div>OPENMAIC_ADMIN_USERNAME / OPENMAIC_ADMIN_PASSWORD</div>
+                <div>OPENMAIC_CREATOR_USERNAME / OPENMAIC_CREATOR_PASSWORD</div>
+                <div>OPENMAIC_LEARNER_USERNAME / OPENMAIC_LEARNER_PASSWORD</div>
               </div>
             </div>
           </div>

@@ -129,7 +129,9 @@ function buildSeedUsers() {
       displayName: process.env.OPENMAIC_ADMIN_DISPLAY_NAME || 'Platform Admin',
       role: 'admin' as const,
       enabled: true,
-      passwordHash: hashPassword(process.env.OPENMAIC_ADMIN_PASSWORD || 'openmaic123'),
+      passwordHash: hashPassword(
+        process.env.OPENMAIC_ADMIN_PASSWORD || 'change-me-admin-password',
+      ),
       grantedPermissions: [],
       revokedPermissions: [],
       createdAt: now,
@@ -141,7 +143,9 @@ function buildSeedUsers() {
       displayName: process.env.OPENMAIC_CREATOR_DISPLAY_NAME || 'Course Creator',
       role: 'creator' as const,
       enabled: true,
-      passwordHash: hashPassword(process.env.OPENMAIC_CREATOR_PASSWORD || 'creator123'),
+      passwordHash: hashPassword(
+        process.env.OPENMAIC_CREATOR_PASSWORD || 'change-me-creator-password',
+      ),
       grantedPermissions: [],
       revokedPermissions: [],
       createdAt: now,
@@ -153,7 +157,9 @@ function buildSeedUsers() {
       displayName: process.env.OPENMAIC_LEARNER_DISPLAY_NAME || 'Training Learner',
       role: 'learner' as const,
       enabled: true,
-      passwordHash: hashPassword(process.env.OPENMAIC_LEARNER_PASSWORD || 'learn123'),
+      passwordHash: hashPassword(
+        process.env.OPENMAIC_LEARNER_PASSWORD || 'change-me-learner-password',
+      ),
       grantedPermissions: [],
       revokedPermissions: [],
       createdAt: now,
