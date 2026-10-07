@@ -1,0 +1,48 @@
+name: Publish HealthAgent v0.3
+
+on:
+  push:
+    branches:
+      - health-agent-updates
+    paths:
+      - ".github/workflows/publish-health-agent-v03.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout update branch
+        uses: actions/checkout@v4
+
+      - name: Download signed HealthAgent artifact
+        env:
+          ARTIFACT_URL: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-4ac4-81f7-be92-ec447de4c81e/raw?se=2026-10-07T04%3A00%3A13Z&sp=r&sv=2026-02-06&sr=b&scid=99aaf27a-8121-53f1-8e0e-e12055a1c3b1&skoid=456594af-533f-44ef-9bdc-35ea2f9daee5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T00%3A01%3A57Z&ske=2026-10-08T00%3A01%3A57Z&sks=b&skv=2026-02-06&sig=ggXBvbeKSZU/ArIP%2B8yMvZp%2BtHbUCrUcEFP71IZ7Sg4%3D'
+        run: |
+          curl -L --fail --retry 3 "$ARTIFACT_URL" -o artifact.zip
+          mkdir -p extracted
+          unzip -o artifact.zip -d extracted
+          cp extracted/app-release.apk health-agent-updates/HealthAgent-latest.apk
+
+      - name: Build update manifest
+        run: |
+          SHA=$(sha256sum health-agent-updates/HealthAgent-latest.apk | awk '{print $1}')
+          cat > health-agent-updates/latest.json <<EOF
+          {
+            "versionCode": 3,
+            "versionName": "0.3.0",
+            "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-latest.apk",
+            "sha256": "$SHA",
+            "notes": "Health Agent V0.3：固定签名；新增 App 内检查更新与下载安装；保留步数、心率、睡眠和血氧读取。"
+          }
+          EOF
+
+      - name: Commit published update
+        run: |
+          git config user.name "HealthAgent Publisher"
+          git config user.email "healthagent-publisher@users.noreply.github.com"
+          git add health-agent-updates/HealthAgent-latest.apk health-agent-updates/latest.json
+          git commit -m "Publish HealthAgent v0.3"
+          git push origin HEAD:health-agent-updates
