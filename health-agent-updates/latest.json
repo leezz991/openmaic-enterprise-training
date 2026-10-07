@@ -1,7 +1,7 @@
 {
-  "versionCode": 5,
-  "versionName": "0.5.0",
-  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.5.0.apk",
-  "sha256": "ccfb41c31d3ee6ede43c20d276dc48ec5e390e927f165ff581f092154a99f06c",
-  "notes": "Health Agent V0.5：新增云端同步文件夹选择；本地同步完成后自动排队上传 daily_health.csv 与 sync_status.json；上传任务要求联网并支持失败重试。"
+  "versionCode": 6,
+  "versionName": "0.6.0",
+  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.6.0.apk",
+  "sha256": "007f813a30fefbfcdf209592750fe19693c03588692d9eeda9f73d20a6944cba",
+  "notes": "Health Agent V0.6：Google Drive API 直连。"
 }
