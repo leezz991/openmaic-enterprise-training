@@ -1,7 +1,7 @@
 {
-  "versionCode": 7,
-  "versionName": "0.7.0",
-  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.7.0.apk",
-  "sha256": "5a81d5484e933fd500a5f9c38cf5050bd322fc4b16de21356c0bad9e0504c6d4",
-  "notes": "Health Agent V0.7：改用 GitHub Private 私有同步；仅上传已完成日期的每日汇总；凭据使用 Android Keystore 加密；仅允许 Fine-grained token；每次上传前验证仓库仍为 Private。"
+  "versionCode": 8,
+  "versionName": "0.8.0",
+  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.8.0.apk",
+  "sha256": "7823225c6a753bc228b1c2f0c57e97283079853f0189ee116723137d9461156d",
+  "notes": "Health Agent V0.8：新增最近上传记录、连续失败状态、预计下次后台同步时间；首页卡片化美化；新增健康盾牌图标；保留 GitHub Private 最小化同步和本机 Keystore 凭据保护。"
 }
