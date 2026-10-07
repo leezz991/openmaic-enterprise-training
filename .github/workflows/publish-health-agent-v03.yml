@@ -1,4 +1,4 @@
-name: Publish HealthAgent v0.8
+name: Publish HealthAgent v0.9
 
 on:
   push:
@@ -16,24 +16,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download V0.8 artifact
+      - name: Download V0.9 artifact
         env:
-          ARTIFACT_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-09c4-820a-a02b-399639b34e41/raw?se=2026-10-07T14%3A39%3A14Z&sp=r&sv=2026-02-06&sr=b&scid=143f1981-5764-51e7-bd30-ffb73a3137aa&skoid=456594af-533f-44ef-9bdc-35ea2f9daee5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T00%3A23%3A27Z&ske=2026-10-08T00%3A23%3A27Z&sks=b&skv=2026-02-06&sig=80Iz2hQDaWd1kY7cv94sMiCL%2BxIx9JnS5c9mVe/B0q0%3D"
+          ARTIFACT_URL: "https://sdmntprwestcentralus.oaiusercontent.com/files/00000000-7134-81fb-935e-ed4e83ee4fd3/raw?se=2026-10-07T14%3A57%3A29Z&sp=r&sv=2026-02-06&sr=b&scid=480b1e7c-4e73-532b-8657-8cb0a4e0f4a7&skoid=456594af-533f-44ef-9bdc-35ea2f9daee5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T00%3A44%3A06Z&ske=2026-10-08T00%3A44%3A06Z&sks=b&skv=2026-02-06&sig=UKHRwafvvsCiBo2KWB0IuGdaHa39rT1TGX4eGmPszWM%3D"
         run: |
           curl -L --fail --retry 3 "$ARTIFACT_URL" -o artifact.zip
           unzip -o artifact.zip
-          mv app-release.apk health-agent-updates/HealthAgent-v0.8.0.apk
+          mv app-release.apk health-agent-updates/HealthAgent-v0.9.0.apk
 
       - name: Update manifest
         run: |
-          SHA=$(sha256sum health-agent-updates/HealthAgent-v0.8.0.apk | awk '{print $1}')
+          SHA=$(sha256sum health-agent-updates/HealthAgent-v0.9.0.apk | awk '{print $1}')
           cat > health-agent-updates/latest.json <<EOF
           {
-            "versionCode": 8,
-            "versionName": "0.8.0",
-            "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.8.0.apk",
+            "versionCode": 9,
+            "versionName": "0.9.0",
+            "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.9.0.apk",
             "sha256": "$SHA",
-            "notes": "Health Agent V0.8：新增最近上传记录、连续失败状态、预计下次后台同步时间；首页卡片化美化；新增健康盾牌图标；保留 GitHub Private 最小化同步和本机 Keystore 凭据保护。"
+            "notes": "Health Agent V0.9：修复跨午夜睡眠归属；按睡眠记录 UID 读取关联血氧，并保留直接读取作为备用路径；首页显示睡眠/血氧诊断计数，便于定位设备侧采集问题。"
           }
           EOF
 
@@ -41,6 +41,6 @@ jobs:
         run: |
           git config user.name "HealthAgent Publisher"
           git config user.email "healthagent-publisher@users.noreply.github.com"
-          git add health-agent-updates/HealthAgent-v0.8.0.apk health-agent-updates/latest.json
-          git commit -m "Publish HealthAgent v0.8"
+          git add health-agent-updates/HealthAgent-v0.9.0.apk health-agent-updates/latest.json
+          git commit -m "Publish HealthAgent v0.9"
           git push origin HEAD:health-agent-updates
