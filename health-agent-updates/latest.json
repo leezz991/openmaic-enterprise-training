@@ -1,7 +1,7 @@
 {
-  "versionCode": 8,
-  "versionName": "0.8.0",
-  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.8.0.apk",
-  "sha256": "7823225c6a753bc228b1c2f0c57e97283079853f0189ee116723137d9461156d",
-  "notes": "Health Agent V0.8：新增最近上传记录、连续失败状态、预计下次后台同步时间；首页卡片化美化；新增健康盾牌图标；保留 GitHub Private 最小化同步和本机 Keystore 凭据保护。"
+  "versionCode": 9,
+  "versionName": "0.9.0",
+  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.9.0.apk",
+  "sha256": "dcd0eb367694ce59725c6207ee7b638892ea27503e6551cc82151fb0d0e03319",
+  "notes": "Health Agent V0.9：修复跨午夜睡眠归属；按睡眠记录 UID 读取关联血氧，并保留直接读取作为备用路径；首页显示睡眠/血氧诊断计数，便于定位设备侧采集问题。"
 }
