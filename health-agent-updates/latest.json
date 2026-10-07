@@ -1,0 +1,7 @@
+{
+  "versionCode": 3,
+  "versionName": "0.3.0",
+  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-latest.apk",
+  "sha256": "4879389d80e77fc17906b7b9ed97b7dfdb7893cf5b6c0e466d60f95566a9c1ba",
+  "notes": "Health Agent V0.3：固定签名；新增 App 内检查更新与下载安装；保留步数、心率、睡眠和血氧读取。"
+}
