@@ -1,7 +1,7 @@
 {
-  "versionCode": 6,
-  "versionName": "0.6.0",
-  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.6.0.apk",
-  "sha256": "007f813a30fefbfcdf209592750fe19693c03588692d9eeda9f73d20a6944cba",
-  "notes": "Health Agent V0.6：Google Drive API 直连。"
+  "versionCode": 7,
+  "versionName": "0.7.0",
+  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.7.0.apk",
+  "sha256": "5a81d5484e933fd500a5f9c38cf5050bd322fc4b16de21356c0bad9e0504c6d4",
+  "notes": "Health Agent V0.7：改用 GitHub Private 私有同步；仅上传已完成日期的每日汇总；凭据使用 Android Keystore 加密；仅允许 Fine-grained token；每次上传前验证仓库仍为 Private。"
 }
