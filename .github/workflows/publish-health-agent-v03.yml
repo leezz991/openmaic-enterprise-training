@@ -1,4 +1,4 @@
-name: Publish HealthAgent v0.4
+name: Repair HealthAgent v0.4 update channel
 
 on:
   push:
@@ -11,38 +11,30 @@ permissions:
   contents: write
 
 jobs:
-  publish:
+  repair:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout update branch
         uses: actions/checkout@v4
 
-      - name: Download signed HealthAgent artifact
-        env:
-          ARTIFACT_URL: 'https://sdmntprwestus.oaiusercontent.com/files/00000000-eb5c-8230-bd85-3dcefa161728/raw?se=2026-10-07T04%3A32%3A58Z&sp=r&sv=2026-02-06&sr=b&scid=63bccc6a-5b1c-5c26-93d2-d389a17aab13&skoid=456594af-533f-44ef-9bdc-35ea2f9daee5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T00%3A18%3A21Z&ske=2026-10-08T00%3A18%3A21Z&sks=b&skv=2026-02-06&sig=mwFhyb8RioTA7FQQm/lBkPAPcCEXUWGglNsP5mS37bU%3D'
+      - name: Publish immutable v0.4 APK path
         run: |
-          curl -L --fail --retry 3 "$ARTIFACT_URL" -o artifact.zip
-          mkdir -p extracted
-          unzip -o artifact.zip -d extracted
-          cp extracted/app-release.apk health-agent-updates/HealthAgent-latest.apk
-
-      - name: Build update manifest
-        run: |
-          SHA=$(sha256sum health-agent-updates/HealthAgent-latest.apk | awk '{print $1}')
+          cp health-agent-updates/HealthAgent-latest.apk health-agent-updates/HealthAgent-v0.4.0.apk
+          SHA=$(sha256sum health-agent-updates/HealthAgent-v0.4.0.apk | awk '{print $1}')
           cat > health-agent-updates/latest.json <<EOF
           {
             "versionCode": 4,
             "versionName": "0.4.0",
-            "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-latest.apk",
+            "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.4.0.apk",
             "sha256": "$SHA",
             "notes": "Health Agent V0.4：新增本地健康数据库、每6小时后台同步、最近3天自动回补、daily_health.csv 与 sync_status.json、本地立即同步按钮。"
           }
           EOF
 
-      - name: Commit published update
+      - name: Commit repaired update channel
         run: |
           git config user.name "HealthAgent Publisher"
           git config user.email "healthagent-publisher@users.noreply.github.com"
-          git add health-agent-updates/HealthAgent-latest.apk health-agent-updates/latest.json
-          git commit -m "Publish HealthAgent v0.4"
+          git add health-agent-updates/HealthAgent-v0.4.0.apk health-agent-updates/latest.json
+          git commit -m "Repair HealthAgent v0.4 immutable APK path"
           git push origin HEAD:health-agent-updates
