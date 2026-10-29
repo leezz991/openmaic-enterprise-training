@@ -1,7 +1,7 @@
 {
-  "versionCode": 9,
-  "versionName": "0.9.0",
-  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.9.0.apk",
-  "sha256": "dcd0eb367694ce59725c6207ee7b638892ea27503e6551cc82151fb0d0e03319",
-  "notes": "Health Agent V0.9：修复跨午夜睡眠归属；按睡眠记录 UID 读取关联血氧，并保留直接读取作为备用路径；首页显示睡眠/血氧诊断计数，便于定位设备侧采集问题。"
+  "versionCode": 10,
+  "versionName": "0.10.0",
+  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.10.0.apk",
+  "sha256": "10d9a02d789b9a875cbafdbac999d68348925df0049ad2020008aa7cd22847b3",
+  "notes": "Health Agent V0.10：新增健康与习惯入口，可记录体重、三餐饱腹程度和饮食备注、零食、饮酒、阅读、专注思考与每日复盘；支持查看周回顾。新增北京时间08:30、13:00、19:00、21:30本地提醒，可调整、关闭和测试，首次使用请开启通知权限。保留原三星健康读取、睡眠血氧修复、后台同步及GitHub私有仓库上传。使用原签名直接覆盖升级，请勿卸载旧版。"
 }
