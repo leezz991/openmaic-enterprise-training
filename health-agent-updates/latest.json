@@ -1,12 +1,12 @@
 {
-  "versionCode": 12,
-  "versionName": "0.12.0",
-  "apkUrl": "https://cdn.jsdelivr.net/gh/leezz991/openmaic-enterprise-training@f262b768967d66736bcda0a3251a9cdee9571cee/health-agent-updates/HealthAgent-v0.12.0.apk",
+  "versionCode": 13,
+  "versionName": "0.13.0",
+  "apkUrl": "https://cdn.jsdelivr.net/gh/leezz991/openmaic-enterprise-training@ece82448dab91bb5a38f2d85d97fc141638c32f0/health-agent-updates/HealthAgent-v0.13.0.apk",
   "apkUrls": [
-    "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/f262b768967d66736bcda0a3251a9cdee9571cee/health-agent-updates/HealthAgent-v0.12.0.apk"
+    "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/ece82448dab91bb5a38f2d85d97fc141638c32f0/health-agent-updates/HealthAgent-v0.13.0.apk"
   ],
-  "browserUrl": "https://lq-health-habits.qiangliu1991.chatgpt.site/downloads/HealthAgent-v0.12.0.apk",
-  "sha256": "c3466fb5ccc1b6f9f9eda3f95e5d562ef39a329c206d2d08b9442e9130d95ff1",
-  "sizeBytes": 7041739,
-  "notes": "健康与习惯 V0.12 原生试运行版：新增今日、记录、回顾、我的四个底部页面，所有日常填写在 App 内完成，无需手机账号登录或跳转网页。本机保存记录和草稿，可补记、修改、删除、自定义指标、导出恢复；首次在网站生成配对码，在 App 我的→同步与设备状态输入一次后自动同步。保留三餐与晚间提醒、原三星健康采集和更新通道。请覆盖安装，不要卸载旧版。首次安装和配对后的手机同步表现进入试运行验证。"
+  "browserUrl": "https://lq-health-habits.qiangliu1991.chatgpt.site/downloads/HealthAgent-v0.13.0.apk",
+  "sha256": "6f50cb0eaa602c79dacde675593e6a460810822d11c10c1126a1cd90282197df",
+  "sizeBytes": 12271088,
+  "notes": "健康与习惯 V0.13：紧凑分组首页，体重直接输入保存，零食/饮酒及阅读/思考快捷登记并可撤销。三餐与详情使用底部原生弹窗，关闭保留草稿，返回保留原页面和位置；优化键盘、横屏、大字体与深色显示。保留已有配对、记录、提醒、三星健康采集和原更新通道。请覆盖安装，不要卸载，已配对无需重新配对。"
 }
