@@ -1,7 +1,7 @@
 {
   "versionCode": 10,
   "versionName": "0.10.0",
-  "apkUrl": "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.10.0.apk",
+  "apkUrl": "https://cdn.jsdelivr.net/gh/leezz991/openmaic-enterprise-training@6d760fe49df6ecc1b506cc132159d3aa345ce4ef/health-agent-updates/HealthAgent-v0.10.0.apk",
   "sha256": "10d9a02d789b9a875cbafdbac999d68348925df0049ad2020008aa7cd22847b3",
   "notes": "Health Agent V0.10：新增健康与习惯入口，可记录体重、三餐饱腹程度和饮食备注、零食、饮酒、阅读、专注思考与每日复盘；支持查看周回顾。新增北京时间08:30、13:00、19:00、21:30本地提醒，可调整、关闭和测试，首次使用请开启通知权限。保留原三星健康读取、睡眠血氧修复、后台同步及GitHub私有仓库上传。使用原签名直接覆盖升级，请勿卸载旧版。"
 }
