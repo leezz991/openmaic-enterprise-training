@@ -1,12 +1,12 @@
 {
-  "versionCode": 11,
-  "versionName": "0.11.0",
-  "apkUrl": "https://cdn.jsdelivr.net/gh/leezz991/openmaic-enterprise-training@bd3172af67b99c71aa9b46ba10dd87c10866d45e/health-agent-updates/HealthAgent-v0.11.0.apk",
+  "versionCode": 12,
+  "versionName": "0.12.0",
+  "apkUrl": "https://cdn.jsdelivr.net/gh/leezz991/openmaic-enterprise-training@f262b768967d66736bcda0a3251a9cdee9571cee/health-agent-updates/HealthAgent-v0.12.0.apk",
   "apkUrls": [
-    "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/health-agent-updates/health-agent-updates/HealthAgent-v0.11.0.apk"
+    "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/f262b768967d66736bcda0a3251a9cdee9571cee/health-agent-updates/HealthAgent-v0.12.0.apk"
   ],
-  "browserUrl": "https://lq-health-habits.qiangliu1991.chatgpt.site/downloads/HealthAgent-v0.11.0.apk",
-  "sha256": "8ff979de369fc19fca595bb1c60afaf4614daa27406b3c07b8cb7328abc9fba3",
-  "sizeBytes": 6894227,
-  "notes": "Health Agent V0.11：修复更新体验。新增下载量和百分比、取消、失败原因保留、重试与备用下载通道；下载完成后检查文件、包名及原签名。安装权限开启后继续安装，已核验的安装包无需重复下载。App内下载超时可用手机浏览器打开私密网站下载同签名APK并直接覆盖安装，请勿卸载旧版。保留健康与习惯打卡、本地提醒和原三星健康同步。"
+  "browserUrl": "https://lq-health-habits.qiangliu1991.chatgpt.site/downloads/HealthAgent-v0.12.0.apk",
+  "sha256": "c3466fb5ccc1b6f9f9eda3f95e5d562ef39a329c206d2d08b9442e9130d95ff1",
+  "sizeBytes": 7041739,
+  "notes": "健康与习惯 V0.12 原生试运行版：新增今日、记录、回顾、我的四个底部页面，所有日常填写在 App 内完成，无需手机账号登录或跳转网页。本机保存记录和草稿，可补记、修改、删除、自定义指标、导出恢复；首次在网站生成配对码，在 App 我的→同步与设备状态输入一次后自动同步。保留三餐与晚间提醒、原三星健康采集和更新通道。请覆盖安装，不要卸载旧版。首次安装和配对后的手机同步表现进入试运行验证。"
 }
