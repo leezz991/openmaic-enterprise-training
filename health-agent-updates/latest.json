@@ -1,12 +1,12 @@
 {
-  "versionCode": 16,
-  "versionName": "0.16.0",
-  "apkUrl": "https://cdn.jsdelivr.net/gh/leezz991/openmaic-enterprise-training@71dadf4fef5a0f8c5bd97297a9cad1824ea147ac/health-agent-updates/HealthAgent-v0.16.0.apk",
+  "versionCode": 17,
+  "versionName": "0.17.0",
+  "apkUrl": "https://cdn.jsdelivr.net/gh/leezz991/openmaic-enterprise-training@71e12ee04c2c3902830e323a7552f94bda86e128/health-agent-updates/HealthAgent-v0.17.0.apk",
   "apkUrls": [
-    "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/71dadf4fef5a0f8c5bd97297a9cad1824ea147ac/health-agent-updates/HealthAgent-v0.16.0.apk"
+    "https://raw.githubusercontent.com/leezz991/openmaic-enterprise-training/71e12ee04c2c3902830e323a7552f94bda86e128/health-agent-updates/HealthAgent-v0.17.0.apk"
   ],
-  "browserUrl": "https://lq-health-habits.qiangliu1991.chatgpt.site/downloads/HealthAgent-v0.16.0.apk",
-  "sha256": "15e730a2b687a0a743d4f2fcb3b561f788b3ab8c4dbe41d3233136a848cc3627",
-  "sizeBytes": 12380222,
-  "notes": "健康与习惯 V0.16：三餐饱腹改为五分饱到十二分饱的文字选项；首页体重下方增加阅读看书入口，原位展开1～5小时滑动条，每格15分钟，可按分钟填写短时阅读。未阅读单独登记，滑动保留草稿，保存后才计入统计；旧记录保留原值。手机和网站使用同一记录，覆盖安装保留配对、数据和提醒，不要卸载。"
+  "browserUrl": "https://lq-health-habits.qiangliu1991.chatgpt.site/downloads/HealthAgent-v0.17.0.apk",
+  "sha256": "dad85cabc3b5fe2eb4e5e2dfcaf0facac913de0cf3a1d8c0ac81958ce23fca96",
+  "sizeBytes": 12393782,
+  "notes": "健康与习惯 V0.17：自动更新增加断点续传、暂停/继续和有限自动重试；中断后保留已下载部分，同一安装包切换通道也可续传，校验通过才安装。修复发布目录超过CDN大小限制导致下载失败的问题。需先覆盖安装本版，之后的更新才能使用新续传下载器。保留原配对、记录和提醒，不要卸载。"
 }
